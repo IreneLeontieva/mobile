@@ -20,8 +20,6 @@ public class AndroidWikiTests extends TestBase {
     @Tag("selenide")
     @Test
     void searchTest() {
-        step("Pass welcome", () ->
-                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Dickens");
@@ -36,11 +34,21 @@ public class AndroidWikiTests extends TestBase {
     @Tag("selenide")
     @Test
     void verifyCustomizeBlock() {
-        step("Pass welcome", () ->
-                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Verify customize block", () -> {
             $(MobileBy.id("org.wikipedia.alpha:id/view_announcement_text"))
                     .shouldHave(Condition.text("Customize your Explore feed"));
+        });
+    }
+
+    @Owner("ileonteva")
+    @DisplayName("Verify saved block")
+    @Tag("selenide")
+    @Test
+    void verifySavedBlock() {
+        step("Verify saved block", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/navigation_bar_item_small_label_view")).click();
+            $(MobileBy.id("org.wikipedia.alpha:id/messageTitleView"))
+                    .shouldHave(Condition.text("Sync reading lists"));
         });
     }
 }

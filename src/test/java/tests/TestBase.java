@@ -3,15 +3,16 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import drivers.BrowserStackMobileDriver;
 import helpers.Attach;
+import io.appium.java_client.MobileBy;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Selenide.closeWebDriver;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.Attach.getSessionId;
+import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     @BeforeAll
@@ -25,6 +26,8 @@ public class TestBase {
     @BeforeEach
     public void startDriver() {
         open();
+        step("Pass welcome", () ->
+                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
     }
 
     @AfterEach
