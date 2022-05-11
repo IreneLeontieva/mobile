@@ -35,12 +35,12 @@ public class AndroidWikiTests extends TestBase {
     @DisplayName("Search in wiki")
     @Tag("selenide")
     @Test
-    void verifyNewsTest() {
+    void verifyCustomizeBlock() {
         step("Pass welcome", () ->
                 $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
-        step("Verify news page", () -> {
-            $(MobileBy.id("org.wikipedia.alpha:id/view_card_header_title"))
-                    .shouldHave(Condition.text("In the news"));
+        step("Verify customize block", () -> {
+            $(MobileBy.id("org.wikipedia.alpha:id/view_announcement_text"))
+                    .shouldHave(Condition.text("Customize your Explore feed"));
         });
     }
 }
