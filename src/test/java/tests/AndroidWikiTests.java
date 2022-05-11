@@ -20,6 +20,8 @@ public class AndroidWikiTests extends TestBase {
     @Tag("selenide")
     @Test
     void searchTest() {
+        step("Pass welcome", () ->
+                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Type search", () -> {
             $(MobileBy.AccessibilityId("Search Wikipedia")).click();
             $(MobileBy.id("org.wikipedia.alpha:id/search_src_text")).setValue("Dickens");
@@ -34,6 +36,8 @@ public class AndroidWikiTests extends TestBase {
     @Tag("selenide")
     @Test
     void verifyNewsTest() {
+        step("Pass welcome", () ->
+                $(MobileBy.id("org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click());
         step("Verify news page", () -> {
             $(MobileBy.id("org.wikipedia.alpha:id/view_card_header_title"))
                     .shouldHave(Condition.text("In the news"));
