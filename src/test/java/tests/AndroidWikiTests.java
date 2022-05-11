@@ -32,7 +32,7 @@ public class AndroidWikiTests extends TestBase {
     }
 
     @Owner("ileonteva")
-    @DisplayName("Search in wiki")
+    @DisplayName("Verify wiki")
     @Tag("selenide")
     @Test
     void verifyCustomizeBlock() {
