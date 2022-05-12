@@ -13,18 +13,18 @@
 <img width="6%" title="Jenkins" src="images/logo/Jenkins.svg">
 </p>
 
-## :japanese_ogre: Реализованные проверки
+## Реализованные проверки
 - Поиск статей в приложении
 - Проверка блока Saved
 - Проверка блока customize на главной странице
 
-## :japanese_ogre: Сборка в Jenkins
+## Сборка в Jenkins
 ### <a target="_blank" href="https://jenkins.autotests.cloud/job/mobile_IL/">Сборка в Jenkins</a>
 <p align="center">
 <img title="Jenkins Dashboard" src="images/screenshots/jenkins-dashboard.png">
 </p>
 
-## :japanese_ogre: Allure отчет
+## Allure отчет
 - ### Главный экран отчета
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screenshots/allure-main-page.png">
@@ -35,7 +35,17 @@
 <img title="Allure Test Page" src="images/screenshots/allure-test-page.png">
 </p>
 
-## :shinto_shrine: Видео примеры прохождения тестов
+## Тесты кейсы в Allure Test Ops
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/allure-test-ops-page.png">
+</p>
+
+## Интеграция с Jira
+<p align="center">
+<img title="Allure Overview Dashboard" src="images/screenshots/jira-page.png">
+</p>
+
+## Видео примеры прохождения тестов
 > К каждому тесту в отчете прилагается видео. Одно из таких видео представлено ниже.
 <p align="center">
   <img title="Selenoid Video" src="images/gif/test-run.gif">
